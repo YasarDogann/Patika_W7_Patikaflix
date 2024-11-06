@@ -30,6 +30,7 @@ Ardından aşağıda istenilen işlemleri gerçekleştiriniz.
 ```csharp
 public class Series
 {
+    // Özellikler - Properties
     public string SerieName { get; set; }
     public int DebutYear { get; set; }
     public string Type { get; set; }
@@ -37,7 +38,10 @@ public class Series
     public string Directors { get; set; }
     public string Platform { get; set; }
 
+    // Boş Yapıcı method
     public Series() { }
+
+    // parametreli yapıcı method
     public Series(string serieName, int debutYear, string type, int premierDate, string directors, string platform)
     {
         SerieName = serieName;
@@ -48,9 +52,10 @@ public class Series
         Platform = platform;
     }
 
+    // dizi bilgilerini string formata dönüştüren object sınıfından override edilen ToString methodu
     public override string ToString()
     {
-        return $"Dizi Adı: {SerieName.PadRight(10)} Yapım Yılı: {DebutYear}     Türü: {Type.PadRight(10)} " +
+        return $"Dizi Adı: {SerieName.PadRight(20)}  Yapım Yılı: {DebutYear}     Türü: {Type.PadRight(10)} " +
             $"Yayınlanma Tarihi: {PremiereDate}      Yönetmenler: {Directors.PadRight(10)} Platform: {Platform}  ";
     }
 
@@ -60,8 +65,9 @@ public class Series
 ## Kod: ComedySeries Class
 
 ```csharp
-public class ComedySeries : Series
+public class ComedySeries 
 {
+    // Özellikler - Properties
     public string SerieName { get; set; }
     public string Type { get; set; }
     public string Directors { get; set; }
@@ -84,6 +90,7 @@ public class ComedySeries : Series
 ```csharp
 static void Main(string[] args)
 {
+    // Series sınıfından dinamik bir liste oluşturuluyor
     List<Series> series = new List<Series>();
     int debutYear, premiereDate;
 
@@ -91,6 +98,7 @@ static void Main(string[] args)
 
     while (isContinue)
     {
+        // Kullanıcıya dizi bilgilerini sorma ve input alma
         Console.ForegroundColor = ConsoleColor.Yellow;
         Console.WriteLine("----- DİZİ EKLEME YAPMA İŞLEMİ -----");
         Console.ResetColor();
@@ -140,9 +148,11 @@ static void Main(string[] args)
         Console.ResetColor();
         char choose = char.Parse(Console.ReadLine().ToLower());
 
-        if (choose == 'e' || choose == 'E') isContinue = true;
-        else if (choose == 'h' || choose == 'H') isContinue = false;
+        // Devam edip etmeyeceği soruluyor
+        if (choose == 'e' || choose == 'E') isContinue = true; // evet derse yeni dizi eklemek için döngü başına döner
+        else if (choose == 'h' || choose == 'H') isContinue = false; // hayır derse döngü biter
 
+        // Yeni bir dizi oluşturulup listeye ekleniyor
         Series newSerie = new Series(name, debutYear, type, premiereDate, directors, platform);
         series.Add(newSerie);
 
@@ -167,6 +177,7 @@ static void Main(string[] args)
         Console.WriteLine(comedySeries);
     }
 
+    // Eklenen Tüm diziler ekrana yazdırırlır
     Console.ForegroundColor= ConsoleColor.Green;
     Console.WriteLine("\r\nEklenen dizizler");
     Console.ResetColor();
