@@ -16,7 +16,7 @@ Bu proje, aşağıdaki konuları öğrenmeye yardımcı olmak için tasarlanmı�
 Bu pratikte sizlerden bir Diziler listesi oluşturmanız ve içerisindeki nesneleri tanımlamanız bekleniyor. Elemanların oluşturuluşu Console ekranı üzerinden olacak.
 Yani kullanıcıya her diziyi oluşturup listeye ekledikten sonra yeni bir dizi ekleyip eklemediğini sormamız gerekiyor.
 
-Örnek Veriler
+- Örnek Veriler
 ![g5LPfut-diziiiiler](https://github.com/user-attachments/assets/0917478b-c004-47a1-beb9-eb14894ef0ec)
 
 Ardından aşağıda istenilen işlemleri gerçekleştiriniz.
