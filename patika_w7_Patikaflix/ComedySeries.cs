@@ -9,8 +9,9 @@ using System.Xml.Linq;
 
 namespace patika_w7_Patikaflix
 {
-    public class ComedySeries : Series
+    public class ComedySeries 
     {
+        // Özellikler - Properties
         public string SerieName { get; set; }
         public string Type { get; set; }
         public string Directors { get; set; }

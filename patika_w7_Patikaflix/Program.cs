@@ -4,6 +4,7 @@
     {
         static void Main(string[] args)
         {
+            // Series sınıfından dinamik bir liste oluşturuluyor
             List<Series> series = new List<Series>();
             int debutYear, premiereDate;
 
@@ -11,6 +12,7 @@
 
             while (isContinue)
             {
+                // Kullanıcıya dizi bilgilerini sorma ve input alma
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine("----- DİZİ EKLEME YAPMA İŞLEMİ -----");
                 Console.ResetColor();
@@ -60,9 +62,11 @@
                 Console.ResetColor();
                 char choose = char.Parse(Console.ReadLine().ToLower());
 
-                if (choose == 'e' || choose == 'E') isContinue = true;
-                else if (choose == 'h' || choose == 'H') isContinue = false;
+                // Devam edip etmeyeceği soruluyor
+                if (choose == 'e' || choose == 'E') isContinue = true; // evet derse yeni dizi eklemek için döngü başına döner
+                else if (choose == 'h' || choose == 'H') isContinue = false; // hayır derse döngü biter
 
+                // Yeni bir dizi oluşturulup listeye ekleniyor
                 Series newSerie = new Series(name, debutYear, type, premiereDate, directors, platform);
                 series.Add(newSerie);
 
@@ -87,6 +91,7 @@
                 Console.WriteLine(comedySeries);
             }
 
+            // Eklenen Tüm diziler ekrana yazdırırlır
             Console.ForegroundColor= ConsoleColor.Green;
             Console.WriteLine("\r\nEklenen dizizler");
             Console.ResetColor();

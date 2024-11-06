@@ -8,6 +8,7 @@ namespace patika_w7_Patikaflix
 {
     public class Series
     {
+        // Özellikler - Properties
         public string SerieName { get; set; }
         public int DebutYear { get; set; }
         public string Type { get; set; }
@@ -15,7 +16,10 @@ namespace patika_w7_Patikaflix
         public string Directors { get; set; }
         public string Platform { get; set; }
 
+        // Boş Yapıcı method
         public Series() { }
+
+        // parametreli yapıcı method
         public Series(string serieName, int debutYear, string type, int premierDate, string directors, string platform)
         {
             SerieName = serieName;
@@ -26,9 +30,10 @@ namespace patika_w7_Patikaflix
             Platform = platform;
         }
 
+        // dizi bilgilerini string formata dönüştüren object sınıfından override edilen ToString methodu
         public override string ToString()
         {
-            return $"Dizi Adı: {SerieName.PadRight(10)} Yapım Yılı: {DebutYear}     Türü: {Type.PadRight(10)} " +
+            return $"Dizi Adı: {SerieName.PadRight(20)}  Yapım Yılı: {DebutYear}     Türü: {Type.PadRight(10)} " +
                 $"Yayınlanma Tarihi: {PremiereDate}      Yönetmenler: {Directors.PadRight(10)} Platform: {Platform}  ";
         }
 
