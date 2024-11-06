@@ -62,7 +62,7 @@ public class Series
 }
 ```
 
-## Kod: ComedySeries Class
+## Kod: ComedySeries Class'ı
 
 ```csharp
 public class ComedySeries 
@@ -187,6 +187,9 @@ static void Main(string[] args)
     }
 }
 ```
+
+## Uygulama Çıktısı: 
+![diziler](https://github.com/user-attachments/assets/69a4f8a9-01bd-4ee5-9b29-9a79abf61c10)
 
 
 
